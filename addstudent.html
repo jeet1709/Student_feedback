@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add User</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+	function form_validate()
+{
+	var username= document.forms["myform"]["username"].value;
+			if(username=='')
+			{
+				alert("Name must be filled out");
+				return false;
+			}
+			var password= document.forms["myform"]["password"].value;
+			if(password=='')
+			{
+				alert("Password must be filled out");
+				return false;
+			}
+			else
+			{
+				alert("Success!");
+				
+			}
+}
+
+</script>
+
+
+</head>
+
+<body>
+	<div class="login-box" name="lg"> 
+		<h1> Add Student </h1>
+			<form onsubmit="return form_validate()" name="myform">
+				<div class="textbox" >
+					<input type="text" placeholder="Name" name="Name" value="" required>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="Username" name="Username" value="" required>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="Email" name="Email" value="" required>
+				</div>
+
+				<div class="textbox">
+					<input type="password" placeholder="Password" name="password" value="" required>
+				</div>
+
+				<input class="button" type="submit" value="Add User" onclick="return form_validate()" >
+			</form>
+	</div>
+
+
+</body>
+</html>
