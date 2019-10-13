@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assign Defect</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+	function form_validate()
+{
+	var username= document.forms["myform"]["username"].value;
+			if(username=='')
+			{
+				alert("Name must be filled out");
+				return false;
+			}
+			var password= document.forms["myform"]["password"].value;
+			if(password=='')
+			{
+				alert("Password must be filled out");
+				return false;
+			}
+			else
+			{
+				alert("Success!");
+				
+			}
+}
+
+</script>
+
+
+</head>
+
+<body>
+	<div class="login-box" name="lg"> 
+		<h1>Assign Feedback</h1>
+			<form action="addfeedback.html" target="_blank" method="get" onsubmit="return form_validate()" name="myform">
+				<div class="textbox" >
+					<input type="text" placeholder="Subject_id" name="Subject id" value="" required>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="Feedback_id" name="Feedback id" value="" required>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="Student Name" name="Student Name" value="" required>
+				</div>
+
+				<input class="button" type="submit" value="Assign feedback" onclick="return form_validate()" >
+			</form>
+	</div>
+
+
+</body>
+</html>
