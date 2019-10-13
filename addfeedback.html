@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Feedback</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+	function form_validate()
+{
+	var username= document.forms["myform"]["Feedback_id"].value;
+			if(Feedback_id=='')
+			{
+				alert("Feedback id must be filled out");
+				return false;
+			}
+			var password= document.forms["myform"]["Subject_id"].value;
+			if(Subject_id=='')
+			{
+				alert("Subject id must be filled out");
+				return false;
+			}
+			else
+			{
+				alert("Success!");
+				
+			}
+}
+
+</script>
+
+
+</head>
+
+<body>
+	<div class="login-box" name="lg"> 
+		<h1> Add Feedback </h1>
+			<form onsubmit="return form_validate()" name="myform">
+				<div class="textbox" >
+					<input type="text" placeholder="Feedback_id" name="Feedback_id" value="" required>
+				</div>
+                                <div class="textbox" >
+					<input type="text" placeholder="Subject_id" name="Subject_id" value="" required>
+				</div>
+
+				<h1>comment:-</h1><br>
+                <textarea cols="30" rows="15"></textarea>
+
+				<input class="button" type="submit" value="Add Feedback" onclick="return form_validate()" >
+			</form>
+	</div>
+
+
+</body>
+</html>
